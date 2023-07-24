@@ -2,59 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kimlik Doğrulama</title>
     <link rel="stylesheet" href="kullanıcı arayüzü css.css">
-    <style>
-        .container {
-            position:relative;
-            transition: transform 10s ease;;
-        }
-    </style>
 </head>
 <body>
-       
-    <div class="container" id="container">
+    <div class="container">
+        <img src="C:\Users\Beyza Karakodak\Desktop\LogoDib.png">
         <div class="form-container sign-in-container" style="transition: transform 0.1 ease;">
             <form action="#">
                 <h3>Hoş Geldiniz!</h3>
-                <p>
-                    Lütfen kimliğinizi doğrulayabilmemiz için giriş yapınız.
-                </p>
+                <p>Lütfen kimliğinizi doğrulayabilmemiz için giriş yapınız.</p>
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Şifre" />
                 <button>GİRİŞ YAP</button>
             </form>
-            <div>
-                <script>
-                    window.onload = function() {
-                        const container = document.getElementById("container");
-                        const containerHeight = container.clientHeight;
-                        const containerWidth = container.clientWidth;
-                        const movementAmount = 2; 
-                        container.addEventListener("mouseenter", () => {
-                        });
-                        document.addEventListener("mousemove", moveContainer);
-                        function moveContainer(e) {
-                             const mouseX = e.clientX;
-                             const mouseY = e.clientY;
-                             const initialX = window.innerWidth / 2 - containerWidth / 2;
-                             const initialY = window.innerHeight / 2 - containerHeight / 2;
-                             const diffX = initialX - mouseX;
-                             const diffY = initialY - mouseY;
-                             const limitedDiffX = Math.min(Math.min(diffX, movementAmount), movementAmount);
-                             const limitedDiffY = Math.min(Math.min(diffY, movementAmount), movementAmount);
-                             const containerY = initialY + limitedDiffY;
-                             const containerX = initialX + limitedDiffX;
-                             container.style.transform = `translate(${containerX}px, ${containerY}px)`;
-                            }
-                        container.addEventListener("mouseleave", () => {
-                            document.removeEventListener("mousemove", moveContainer);
-                        });
-                    };
-                  </script>
-                  
-            </div>
         </div>
     </div>
 </body>
